@@ -1,6 +1,3 @@
-import os
-from dotenv import load_dotenv
-load_dotenv()
 import streamlit as st
 from app.langchain.helper import generate_workout_plans
 

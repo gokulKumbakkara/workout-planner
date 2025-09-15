@@ -17,6 +17,15 @@ else:
     if not hasattr(langchain, "llm_cache"):
         langchain.llm_cache = None
 
+import os
+import sys
+from pathlib import Path
+
+# Add project root to Python path
+project_root = Path(__file__).parent.parent.parent
+if str(project_root) not in sys.path:
+    sys.path.append(str(project_root))
+
 from settings import GROQ_API_KEY
 
 from langchain_core.prompts import PromptTemplate
